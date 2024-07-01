@@ -3,6 +3,9 @@
   "platforms": {
     "css": {
       "transformGroup": "scss",
+      "transforms": ["name/kebab","shadow/css/shorthand"],
+      "buildPath": "scss/",
+      "prefix": "gf",
       "files": [
         {
           "destination": "scss/variables.scss",
