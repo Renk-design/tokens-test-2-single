@@ -1,3 +1,10 @@
+import { registerTransforms } from '@tokens-studio/sd-transforms';
+import StyleDictionary from 'style-dictionary';
+
+// will register them on StyleDictionary object
+// that is installed as a dependency of this package.
+registerTransforms(StyleDictionary);
+
 export default {
   hooks: {
     formats: {
@@ -34,6 +41,7 @@ export default {
   platforms: {
     "css": {
       "transformGroup": "scss",
+      "transforms": ["ts/shadow/css/shorthand"],
       "files": [
         {
           "destination": "scss/variables.scss",
