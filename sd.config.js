@@ -5,7 +5,7 @@ import StyleDictionary from 'style-dictionary';
 // that is installed as a dependency of this package.
 registerTransforms(StyleDictionary);
 
-export default {
+const sd = StyleDictionary.extend({export default {
   hooks: {
     formats: {
       // Adding a custom format to show how to get an alias's name.
@@ -27,8 +27,8 @@ export default {
                     return `${ref.name}`;
                   });
                 });
-              }
-            }
+              },
+            },
 
             return `export const ${token.name} = ${value};`;
           })
@@ -46,8 +46,14 @@ export default {
         {
           "destination": "scss/variables.scss",
           "format": "scss/variables"
-        }
-      ]
-    }
-  }
-}
+        },
+      ],
+    },
+  },
+},
+});
+
+sd.cleanAllPlatforms();
+sd.buildAllPlatforms();
+
+
