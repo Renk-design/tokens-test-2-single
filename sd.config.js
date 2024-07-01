@@ -1,11 +1,4 @@
-import { registerTransforms } from '@tokens-studio/sd-transforms';
-import StyleDictionary from 'style-dictionary';
-
-// will register them on StyleDictionary object
-// that is installed as a dependency of this package.
-registerTransforms(StyleDictionary);
-
-const sd = StyleDictionary.extend({export default {
+export default {
   hooks: {
     formats: {
       // Adding a custom format to show how to get an alias's name.
@@ -27,8 +20,8 @@ const sd = StyleDictionary.extend({export default {
                     return `${ref.name}`;
                   });
                 });
-              },
-            },
+              }
+            }
 
             return `export const ${token.name} = ${value};`;
           })
@@ -39,21 +32,25 @@ const sd = StyleDictionary.extend({export default {
 
   source: ['tokens/**/*.json'],
   platforms: {
-    "css": {
-      "transformGroup": "scss",
-      "transforms": ["ts/shadow/css/shorthand"],
-      "files": [
+    css: {
+      transformGroup: 'css',
+      buildPath: 'build/',
+      files: [
         {
-          "destination": "scss/variables.scss",
-          "format": "scss/variables"
+          destination: 'tokens.css',
+          format: 'css/variables',
+          options: {
+            outputReferences: true, // new setting, if true will use variable references
+          },
+        },
+        {
+          destination: 'tokens.scss',
+          format: 'scss/variables',
+          options: {
+            outputReferences: true, // new setting, if true will use variable references
+          },
         },
       ],
     },
   },
-},
-});
-
-sd.cleanAllPlatforms();
-sd.buildAllPlatforms();
-
-
+};
