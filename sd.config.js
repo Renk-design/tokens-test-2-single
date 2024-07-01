@@ -30,7 +30,7 @@ export default {
     },
   },
 
-  source: ['tokens/**/*.json'],
+  source: ['tokens.json'],
   platforms: {
     json: {
       buildPath: 'build/',
