@@ -14,7 +14,7 @@ registerTransforms(StyleDictionary, {
   
 export default {
 
-  source: ['tokens.json'],
+  source: ['tokens/**/*.json'],
   platforms: {
     scss: {
       transformGroup: 'tokens-studio', // <-- apply the tokens-studio transformGroup to apply all transforms
