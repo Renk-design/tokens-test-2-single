@@ -43,6 +43,7 @@ export default {
       transformGroup: 'tokens-studio', // <-- apply the tokens-studio transformGroup to apply all transforms
       transforms: ['name/kebab','shadow/css/shorthand'], // <-- add a token name transform for generating token names, default is camel
       buildPath: 'build/scss/',
+      prefix: 'gf',
       files: [
         {
           destination: 'variables.scss',
