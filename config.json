@@ -6,7 +6,7 @@
       "buildPath": "build/",
       "files": [
         {
-          "destination": "scss/variables.css",
+          "destination": "scss/variables.scss",
           "format": "scss/variables"
         }
       ]
