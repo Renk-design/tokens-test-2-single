@@ -34,6 +34,7 @@ export default {
   platforms: {
     css: {
       transformGroup: 'css',
+      transforms: ['name/kebab','shadow/css/shorthand'],
       buildPath: 'build/',
       files: [
         {
