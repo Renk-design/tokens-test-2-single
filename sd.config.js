@@ -32,47 +32,14 @@ export default {
 
   source: ['tokens/**/*.json'],
   platforms: {
-    json: {
-      buildPath: 'build/',
-      files: [
+    "css": {
+      "transformGroup": "scss",
+      "files": [
         {
-          destination: 'tokens.json',
-          format: 'json/nested',
-        },
-      ],
-    },
-    js: {
-      buildPath: 'build/',
-      transformGroup: 'js',
-      files: [
-        {
-          destination: 'tokens.js',
-          format: 'customFormat',
-          options: {
-            outputReferences: true,
-          },
-        },
-      ],
-    },
-    css: {
-      transformGroup: 'css',
-      buildPath: 'build/',
-      files: [
-        {
-          destination: 'tokens.css',
-          format: 'css/variables',
-          options: {
-            outputReferences: true, // new setting, if true will use variable references
-          },
-        },
-        {
-          destination: 'tokens.scss',
-          format: 'scss/variables',
-          options: {
-            outputReferences: true, // new setting, if true will use variable references
-          },
-        },
-      ],
-    },
-  },
-};
+          "destination": "scss/variables.scss",
+          "format": "scss/variables"
+        }
+      ]
+    }
+  }
+}
