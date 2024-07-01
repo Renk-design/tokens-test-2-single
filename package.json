@@ -12,5 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "style-dictionary": "4.0.0-prerelease.30"
+  },
+  "dependencies": {
+    "@zip.js/zip.js": "^2.7.45"
   }
 }
