@@ -10,7 +10,7 @@ registerTransforms(StyleDictionary, {
     composition: true,
     typography: true,
     shadow: true,
-  },
+  };
   
 export default {
 
