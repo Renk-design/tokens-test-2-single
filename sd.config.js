@@ -35,6 +35,7 @@ export default {
     css: {
       transformGroup: 'css',
       transforms: ['name/kebab','shadow/css/shorthand'],
+      prefix: 'gf',
       buildPath: 'build/',
       files: [
         {
