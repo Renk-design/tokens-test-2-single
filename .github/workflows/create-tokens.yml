@@ -15,7 +15,8 @@ jobs:
       - run: npm install
       - run: npm i @zip.js/zip.js
       - run: npm install @tokens-studio/sd-transforms
-      - run: node build-output.js
+      - run: npm run build
+      # - run: node build-output.js
       # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
