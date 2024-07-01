@@ -5,6 +5,13 @@ import StyleDictionary from 'style-dictionary';
 // that is installed as a dependency of this package.
 registerTransforms(StyleDictionary);
 
+registerTransforms(StyleDictionary, {
+  expand: {
+    composition: true,
+    typography: true,
+    shadow: true,
+  },
+  
 export default {
 
   source: ['tokens.json'],
